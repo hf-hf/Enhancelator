@@ -81,24 +81,24 @@
             </tr>
           </thead>
           <tr>
-            <td><p>Skill Level</p></td>
+            <td><p>强化技能等级</p></td>
             <td></td>
             <td align="right"><input id="i_enhancing_level" type="number" min="1" max="200" placeholder="100"></td>
           </tr>
           <tr>
-            <td><p>Laboratory Level</p></td>
+            <td><p>实验室等级（房子）</p></td>
             <td></td>
             <td align="right"><input id="i_laboratory_level" type="number" min="0" max="8" placeholder="0"></td>
           </tr>
           <tr><td colspan="3"><div class="top_divider"></div></td></tr>
           <tr>
-            <td><p>Enchanted Gloves</p></td>
+            <td><p>附魔手套等级</p></td>
             <td align="center"><input id="i_use_enchanted" type="checkbox" class="enhancer_stats_check_box"></td>
             <td align="right"><input id="i_enchanted_level" type="number" min="0" max="20" placeholder="0"></td>
           </tr>
           <tr><td colspan="3"><div class="top_divider"></div></td></tr>
           <tr>
-            <td><p>Enhancer Level</p></td>
+            <td><p>强化工具等级</p></td>
             <td></td>
             <td align="right"><input id="i_enhancer_level" type="number" min="0" max="20" placeholder="0"></td>
           </tr>
@@ -146,11 +146,11 @@
           </tr>
           <tr><td colspan="3"><div class="top_divider"></div></td></tr>
           <tr>
-            <td colspan="2"><p>Hourly Rate:</p></td>
+            <td colspan="2"><p>工时费:</p></td>
             <td align="right"><input id="i_hourly_rate" type="number" min="0" max="100000000" placeholder="3000000"></td>
           </tr>
           <tr>
-            <td colspan="2"><p>% Rate:</p></td>
+            <td colspan="2"><p>% 交易税:</p></td>
             <td align="right"><input id="i_percent_rate" type="number" min="0" max="20" placeholder="2"></td>
           </tr>
         </table>
@@ -243,7 +243,7 @@
               </tr>
               <tr><td colspan="3"><div class="top_divider"></div></td></tr>
               <tr>
-                <td colspan="2"><p>Target:</p></td>
+                <td colspan="2"><p>要强化到多少等级</p></td>
                 <td><input id="i_stop_at" type="number" min="1" max="20" value="10" placeholder="10"></td>
               </tr>
             </tbody>
@@ -255,27 +255,31 @@
       <table id="myTable" class="results_table">
         <thead>
           <tr>
-            <th class="results_header_cells">Prot</th>
-            <th class="results_header_cells">Actions</th>
-            <th class="results_header_cells">Time</th>
-            <th class="results_header_cells">Exp</th>
-            <th class="results_header_cells">Exp/h</th>
-            <th class="results_header_cells" title="Gold / Experience">G/E</th>
+            <th class="results_header_cells">从多少级开始保护</th>
+            <th class="results_header_cells">强化次数</th>
+            <th class="results_header_cells">时间</th>
+            <th class="results_header_cells">经验</th>
+            <th class="results_header_cells">每小时经验</th>
+            <th class="results_header_cells" title="Gold / Experience">金币/经验/th>
             <th class="results_header_icon_cell" id="r_mat_1_icon"><svg><use xlink:href="#"></use></svg></th>
             <th class="results_header_icon_cell" id="r_mat_2_icon"><svg><use xlink:href="#"></use></svg></th>
             <th class="results_header_icon_cell" id="r_mat_3_icon"><svg><use xlink:href="#"></use></svg></th>
             <th class="results_header_icon_cell" id="r_mat_4_icon"><svg><use xlink:href="#"></use></svg></th>
             <th class="results_header_icon_cell" id="r_mat_5_icon"><svg><use xlink:href="#"></use></svg></th>
             <th class="results_header_icon_cell" ><svg><use xlink:href="#coin"></use></svg></th>
-            <th class="results_header_cells">Protects</th>
-            <th class="results_header_cells" title="Enhancing costs only, excludes base item">Mat Cost</th>
-            <th class="results_header_cells" title="(Mat Cost + Base Item + Time * Hourly Rate) * (1 + % Rate)">Total Cost</th>
+            <th class="results_header_cells">保护次数</th>
+            <th class="results_header_cells" title="Enhancing costs only, excludes base item">强化开销（不含+0）</th>
+            <th class="results_header_cells" title="(Mat Cost + Base Item + Time * Hourly Rate) * (1 + % Rate)">总开销</th>
           </tr>
         </thead>
         <tbody id="results_table_body" style="display: table-header-group">
         </tbody>
-      </table>
+      </table>	
 	  </div>
+	<div class="tips" style="width: 100%;">
+	    <p>绿色行：总开销最少</p>
+	    <p>蓝色行：强化开销最少</p>
+	</div>
   </div>
   <div style="display: none;">
     <table>
